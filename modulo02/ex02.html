@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio 02</title>
+</head>
+<body>
+    <input type="text" name="nome" id="nome">
+    <button onclick="adicionar()">Adicionar</button>
+    <ul id="lista">
+       
+    </ul>
+    <script>
+
+        var lista =  document.querySelector("ul#lista")
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        for (var nome of nomes) {
+            
+            var linha = document.createElement('li');
+            linha.textContent = nome
+             lista.appendChild(linha)
+
+        }
+
+        function adicionar() {
+            
+            var text =  document.querySelector("input#nome")
+
+            var linha = document.createElement('li')
+            linha.textContent = text.value
+
+            lista.appendChild(linha)
+            
+        }
+        
+
+    </script>
+</body>
+</html>
